@@ -295,176 +295,177 @@ header nav .download-btn:hover {
 	}
 }
 
-/* Footer General Styling */
-footer {
-	background-color: #1f1f1f;
-	color: #fff;
-	padding: 40px;
-	font-family: Arial, sans-serif;
+/* Base Footer Styles */
+.footer {
+	background-color: white;
+	padding: 40px 20px;
+	font-family: "Arial", sans-serif;
 }
 
 .footer-container {
 	display: flex;
 	justify-content: space-between;
-	flex-wrap: wrap; /* Ensures columns wrap on smaller screens */
+	flex-wrap: wrap;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
-.footer-logo-section {
-	width: 25%;
+.footer-brand {
+	flex: 1;
+	margin-right: 20px;
 }
 
-.logo {
-	width: 120px;
+.footer-links,
+.footer-legal,
+.footer-services,
+.footer-newsletter {
+	flex: 1;
+	margin-right: 20px;
 }
 
-.footer-badges img {
-	display: block;
-	margin-bottom: 10px;
-	width: 95px;
-}
-
-.footer-links {
-	display: flex;
-	width: 65%;
-	justify-content: space-between;
-}
-
-.footer-column h4 {
-	margin-bottom: 15px;
-	font-weight: bold;
+.footer-links h4,
+.footer-legal h4,
+.footer-services h4,
+.footer-newsletter h4 {
 	font-size: 16px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	color: black;
 }
 
-.footer-column ul {
+.footer-links ul,
+.footer-legal ul,
+.footer-services ul {
 	list-style: none;
 	padding: 0;
 }
 
-.footer-column ul li {
+.footer-links ul li,
+.footer-legal ul li,
+.footer-services ul li {
 	margin-bottom: 10px;
 }
 
-.footer-column ul li a {
+.footer-links ul li a,
+.footer-legal ul li a,
+.footer-services ul li a {
+	color: #333;
+	font-size: 14px;
 	text-decoration: none;
-	color: #fff;
 }
 
-.footer-column ul li a:hover {
+.footer-links ul li a:hover,
+.footer-legal ul li a:hover,
+.footer-services ul li a:hover {
 	text-decoration: underline;
 }
 
+/* Newsletter Section */
+.footer-newsletter p {
+	color: #333;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.footer-newsletter form {
+	display: flex;
+	width: 100%;
+}
+
+.footer-newsletter input[type="email"] {
+	padding: 10px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.footer-newsletter button {
+	padding: 10px 16px;
+	font-size: 14px;
+	background-color: black;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	width: 100%;
+	cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+	background-color: #333;
+}
+
 .footer-bottom {
-	border-top: 1px solid #333;
-	padding-top: 20px;
-	margin-top: 20px;
 	text-align: center;
+	margin-top: 20px;
+	border-top: 1px solid #ccc;
+	padding-top: 10px;
 }
 
 .footer-bottom p {
-	margin: 5px 0;
-}
-
-.footer-text {
 	font-size: 12px;
-	max-width: 800px;
-	margin: 10px auto;
-	text-align: center;
+	color: #333;
 }
 
-.social-media a {
-	display: inline-block;
-	margin: 0 10px;
-}
+/* Media Queries for Small Screens */
 
-.social-media img {
-	width: 24px;
-	height: 24px;
-}
-
-/* MEDIA QUERIES */
-
-/* Tablets and Medium Screens */
-@media (max-width: 1024px) {
+/* Mobile and Small Screens */
+@media (max-width: 600px) {
 	.footer-container {
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.footer-logo-section {
-		width: 100%;
-		text-align: center;
-		margin-bottom: 20px;
-	}
-
-	.footer-links {
-		width: 100%;
 		display: flex;
 		flex-direction: column;
-		text-align: center;
+		align-items: flex-start;
+		padding: 20px;
 	}
 
-	.footer-column {
+	.footer-brand,
+	.footer-links,
+	.footer-legal,
+	.footer-services,
+	.footer-newsletter {
+		flex: none;
 		margin-bottom: 20px;
+		text-align: left;
+		width: 100%;
 	}
-}
 
-/* Mobile Screens */
-@media (max-width: 768px) {
-	.footer-container {
+	/* Adjust the newsletter form for mobile */
+	.footer-newsletter form {
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
+		width: 100%;
 	}
 
-	.footer-logo-section {
+	.footer-newsletter input[type="email"] {
 		width: 100%;
+		margin-bottom: 10px;
+		border-radius: 4px;
+		padding: 10px;
+	}
+
+	.footer-newsletter button {
+		width: 100%;
+		padding: 10px;
+		border-radius: 4px;
+	}
+
+	/* Align lists vertically and increase spacing */
+	.footer-links ul li,
+	.footer-legal ul li,
+	.footer-services ul li {
+		font-size: 16px;
+		margin-bottom: 15px;
+	}
+
+	.footer-links,
+	.footer-legal,
+	.footer-services {
+		margin-bottom: 40px;
+	}
+
+	.footer-bottom p {
 		text-align: center;
-		margin-bottom: 30px;
-	}
-
-	.footer-badges img {
-		display: inline-block;
-		margin-right: 10px;
-		width: 70px; /* Resize badges for small screens */
-	}
-
-	.footer-links {
-		flex-direction: column;
 		width: 100%;
-		align-items: center;
-		text-align: center;
-	}
-
-	.footer-column {
-		width: 100%;
-		margin-bottom: 30px;
-	}
-
-	.social-media img {
-		width: 30px;
-		height: 30px; /* Larger icons for mobile */
-	}
-}
-
-/* Extra Small Screens */
-@media (max-width: 480px) {
-	.footer-badges img {
-		width: 50px;
-	}
-
-	.footer-column h4 {
-		font-size: 14px;
-	}
-
-	.footer-text {
-		font-size: 10px;
-	}
-
-	.footer-bottom {
-		font-size: 12px;
-	}
-
-	.social-media img {
-		width: 24px;
-		height: 24px;
 	}
 }

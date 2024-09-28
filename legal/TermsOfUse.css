@@ -1,16 +1,10 @@
-/* General Resets */
-* {
+/* Global Styles */
+body {
+	font-family: Arial, sans-serif;
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
-}
-
-body {
-	background-color: #fff;
+	line-height: 1.6;
 	color: #333;
-	overflow-x: hidden;
-	padding-top: 80px; /* Padding for fixed header */
 }
 
 /* Header Styling */
@@ -153,214 +147,78 @@ header nav .download-btn:hover {
 	}
 }
 
-/* Hero Section */
-.hero {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 100px 50px;
-	background-color: #fff;
-	position: relative;
+/* Styling for the Terms of Use Container */
+.terms-container {
+	max-width: 1200px;
+	margin: 80px auto;
+	padding: 20px;
+
+	border-radius: 10px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.hero .content {
-	max-width: 600px;
-}
-
-.hero h1 {
-	font-size: 48px;
-	font-weight: 700;
-	color: #000;
+/* Main Heading Styling */
+.terms-container h1 {
+	font-size: 32px;
+	font-weight: bold;
+	color: #e74c3c;
+	text-align: center;
 	margin-bottom: 20px;
 }
 
-.hero p {
-	font-size: 18px;
-	margin-bottom: 30px;
-}
-
-.hero .app-buttons {
-	display: flex;
-	align-items: center; /* Align buttons vertically */
-	gap: 20px; /* Add a consistent gap between the buttons */
-	flex-wrap: wrap; /* Wrap the buttons on smaller screens */
-}
-
-.hero .app-store {
-	display: inline-block; /* Ensure that the buttons maintain their size */
-}
-
-.hero .app-store img {
-	width: 150px;
-	height: auto; /* Keep the aspect ratio consistent */
-}
-
-@media (max-width: 767px) {
-	.hero .app-buttons {
-		justify-content: center; /* Center buttons on smaller screens */
-		gap: 10px; /* Reduce the gap slightly for smaller screens */
-	}
-}
-
-.hero .cta-bar {
+/* Section Headings Styling */
+.terms-container h2 {
+	font-size: 24px;
+	font-weight: 600;
+	color: #333;
 	margin-top: 30px;
 }
 
-.hero .cta-bar img {
-	width: 350px;
-}
-
-/* Phone Images */
-.phone-images {
-	position: relative;
-}
-
-.phone-images img {
-	width: 500px; /* Increased the size */
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-	.hero {
-		flex-direction: column;
-		text-align: center;
-	}
-
-	.phone-images {
-		margin-top: 20px;
-	}
-
-	.phone-images img {
-		width: 400px; /* Increased size for tablets/smaller screens */
-	}
-}
-
-@media (max-width: 767px) {
-	.phone-images img {
-		width: 350px; /* Slightly smaller for mobile screens */
-	}
-}
-
-/* Service Providers Section */
-.service-providers {
-	text-align: center;
-	padding: 50px 20px;
-}
-
-.service-providers p {
-	font-size: 20px;
-	color: #000;
+/* Paragraph and List Styling */
+.terms-container p {
+	font-size: 16px;
+	color: #555;
+	line-height: 1.6;
 	margin-bottom: 20px;
-	font-weight: 500;
 }
 
-.service-providers .logos {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 20px; /* For proper spacing between logos */
+.terms-container ul {
+	padding-left: 20px;
+	margin-bottom: 20px;
 }
 
-.service-providers .logos img {
-	width: 80px;
-	height: 80px; /* Fixed height to maintain uniformity */
-	object-fit: contain; /* Ensures images fit well without distortion */
-	margin: 0 10px;
-	border-radius: 15px; /* For the rounded corners effect */
-	background-color: #f9f9f9; /* Soft background color for the logos */
-	padding: 10px;
-	/* filter: grayscale(100%); */
-	cursor: pointer;
-	transition: all 0.3s ease-in-out;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-}
-
-.service-providers .logos img:hover {
-	filter: grayscale(0);
-	transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
-/* Zangapay Services Section */
-.zangapay-services {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 60px;
-	background-color: #fff;
-}
-
-.service-content {
-	max-width: 600px;
-}
-
-.service-content h2 {
-	font-size: 1.5rem;
-	color: #e74c3c;
+.terms-container ul li {
+	font-size: 16px;
+	color: #555;
+	line-height: 1.6;
 	margin-bottom: 10px;
 }
 
-.service-content h3 {
-	font-size: 2.5rem;
-	font-weight: bold;
+/* Address Styling */
+.terms-container address {
+	font-style: normal;
 	color: #333;
-	margin-bottom: 20px;
+	font-size: 16px;
 }
 
-.service-content ul {
-	list-style: none;
-	padding: 0;
-}
-
-.service-content li {
-	margin-bottom: 20px;
-}
-
-.service-content .icon {
-	color: #e74c3c;
-	margin-right: 10px;
-}
-
-.service-content strong {
-	font-size: 1.3rem;
-	color: #333;
-}
-
-.service-content p {
-	font-size: 1rem;
-	color: #555;
-	margin-top: 5px;
-}
-
-.service-content .more-services {
-	margin-top: 20px;
-	font-size: 1.1rem;
-	color: #555;
-}
-
-.service-image img {
-	width: 350px;
-	border-radius: 20px;
-}
-
-@media (min-width: 768px) {
-	.service-image img {
-		width: 450px;
-	}
-}
-
-@media (max-width: 767px) {
-	.zangapay-services {
-		flex-direction: column;
-		text-align: center;
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+	.terms-container {
+		margin: 60px 20px;
+		padding: 15px;
 	}
 
-	.service-image {
-		margin-top: 30px;
+	.terms-container h1 {
+		font-size: 28px;
 	}
 
-	.service-image img {
-		width: 300px;
+	.terms-container h2 {
+		font-size: 22px;
+	}
+
+	.terms-container p,
+	.terms-container ul li {
+		font-size: 14px;
 	}
 }
 

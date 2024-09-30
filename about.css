@@ -232,6 +232,7 @@ header nav .download-btn:hover {
 
 .about-image {
 	flex-shrink: 0;
+	/* width: 1100px; */
 	animation: slideIn 0.6s ease-out;
 }
 

@@ -213,15 +213,14 @@ header nav .download-btn:hover {
 /* Phone Images */
 .phone-images {
 	position: relative;
-	text-align: center; /* Ensures the image is centered */
 }
 
 .phone-images img {
-	width: 1000px; /* Increase the size */
-	transform: rotate(19deg); /* Ensures the image is straight */
+	width: 500px; /* Increase the size */
+	transform: rotate(19deg); /* Tilts the image */
 	display: inline-block; /* Ensures proper alignment */
 	max-width: 100%; /* Responsive size */
-	height: auto; /* Maintains aspect ratio */
+	margin-top: 70px;
 }
 
 /* Responsive Design */
@@ -346,6 +345,7 @@ header nav .download-btn:hover {
 .service-image img {
 	width: 350px;
 	border-radius: 20px;
+	margin-bottom: 80px;
 }
 
 @media (min-width: 768px) {
